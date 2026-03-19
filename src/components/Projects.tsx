@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import ContactModal from './ContactModal';
 
 const projects = [
-  { name: 'Rusty House', tags: ['HALOORA WINDOW', 'HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA X SLIDING DOOR'], img: 'https://picsum.photos/seed/project1/800/600' },
-  { name: 'Rosewood Pilates Studio', tags: ['HALOORA X SLIDING DOOR', 'HALOORA GLASS SKYLIGHT / RIDGELIGHT'], img: 'https://picsum.photos/seed/project2/800/600' },
-  { name: 'Beulah Walk', tags: ['HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA SLIDING DOOR', 'HALOORA WINDOW'], img: 'https://picsum.photos/seed/project3/800/600' },
-  { name: 'Berkeley Road', tags: ['HALOORA X SLIDING DOOR', 'HALOORA SLIDING DOOR'], img: 'https://picsum.photos/seed/project4/800/600' },
+  { name: 'Azure Bay Residences', tags: ['LUXURY VILLA', 'OCEANFRONT', 'SMART HOME'], img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80' },
+  { name: 'The Zenith Tower', tags: ['PENTHOUSE', 'CITY VIEW', 'MODERN DESIGN'], img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80' },
+  { name: 'Emerald Gardens', tags: ['FAMILY ESTATE', 'SUSTAINABLE', 'LANDSCAPED'], img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80' },
+  { name: 'Summit Ridge', tags: ['MOUNTAIN RETREAT', 'PRIVATE', 'ARCHITECTURAL'], img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80' },
 ];
 
 export default function Projects() {

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-[var(--color-black)] text-white py-24 md:py-40 px-6 md:px-16 flex flex-col items-center text-center relative overflow-hidden border-t border-white/10">
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
-          src="https://picsum.photos/seed/footer/2000/1000" 
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=80" 
           alt="Footer background" 
           className="w-full h-full object-cover grayscale"
         />
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         
         <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.2] mb-16">
-          Ready to discuss your next <span className="italic text-gradient-gold">project</span>?
+          Ready to find your <span className="italic text-gradient-gold">dream</span> home?
         </h2>
         
         <div 

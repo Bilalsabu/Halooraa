@@ -6,23 +6,23 @@ const STORIES = [
   {
     id: 1,
     name: "Vaidas Vileikis",
-    role: "Founder, Name Architects",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    quote: "Unrivaled customer service, cutting edge design and quality. Haloora is firmly lodged in our list of preferred suppliers of glazing products."
+    role: "Founder, Vileikis Architects",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
+    quote: "Unrivaled customer service and an eye for luxury. Haloora is our preferred partner for sourcing exclusive high-end residential properties."
   },
   {
     id: 2,
     name: "Eleanor Sterling",
     role: "Director, Sterling Interiors",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    quote: "The attention to detail in their architectural solutions is simply unmatched. They don't just build structures; they create living art pieces."
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    quote: "The attention to detail in their property selection is simply unmatched. They don't just sell houses; they offer curated lifestyle experiences."
   },
   {
     id: 3,
     name: "Marcus Thorne",
     role: "CEO, Thorne Developments",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    quote: "Working with Haloora Estates has transformed our projects. Their ability to blend modern aesthetics with timeless durability is a game-changer."
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    quote: "Working with Haloora Estates has transformed our portfolio. Their ability to identify properties with both modern aesthetics and investment value is a game-changer."
   }
 ];
 

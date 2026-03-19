@@ -9,11 +9,11 @@ const properties = [
     title: "Villa Aurora",
     description: "A stunning contemporary villa featuring panoramic ocean views, infinity pool, and state-of-the-art smart home integration. Experience the pinnacle of luxury living.",
     fullDescription: "Villa Aurora is a masterpiece of modern architecture, designed to seamlessly blend indoor and outdoor living. The property features 5 spacious bedrooms, 7 bathrooms, a chef's kitchen, and a custom-built wine cellar. The expansive outdoor terrace includes a zero-edge infinity pool that appears to drop off into the ocean, providing breathtaking sunset views every evening.",
-    image: "https://picsum.photos/seed/villa1/2000/1200",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=80",
     gallery: [
-      "https://picsum.photos/seed/villa-g1/1000/800",
-      "https://picsum.photos/seed/villa-g2/1000/800",
-      "https://picsum.photos/seed/villa-g3/1000/800"
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
     ],
     price: "$12,500,000",
     location: "Beverly Hills, CA",
@@ -28,11 +28,11 @@ const properties = [
     title: "The Pinnacle Penthouse",
     description: "Perched above the city skyline, this exclusive penthouse offers unmatched elegance with floor-to-ceiling windows, private elevator access, and a rooftop terrace.",
     fullDescription: "Occupying the entire top floor of the city's most prestigious residential tower, The Pinnacle Penthouse offers 360-degree views of the skyline. The interior is finished with the finest materials, including imported Italian marble and custom millwork. The private rooftop terrace features a plunge pool, outdoor kitchen, and lounge area perfect for entertaining.",
-    image: "https://picsum.photos/seed/penthouse1/2000/1200",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80",
     gallery: [
-      "https://picsum.photos/seed/penthouse-g1/1000/800",
-      "https://picsum.photos/seed/penthouse-g2/1000/800",
-      "https://picsum.photos/seed/penthouse-g3/1000/800"
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
     ],
     price: "$8,900,000",
     location: "Manhattan, NY",
@@ -47,11 +47,11 @@ const properties = [
     title: "Serenity Estate",
     description: "Nestled in a private enclave, this sprawling estate combines classic architecture with modern amenities, featuring lush gardens, a tennis court, and a guest house.",
     fullDescription: "Serenity Estate is a private sanctuary set on 5 acres of meticulously landscaped grounds. The main residence boasts classic European architecture with modern updates throughout. Features include a grand double-height foyer, a wood-paneled library, a state-of-the-art home theater, and an indoor spa. The property also includes a separate 2-bedroom guest house and a championship tennis court.",
-    image: "https://picsum.photos/seed/estate1/2000/1200",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80",
     gallery: [
-      "https://picsum.photos/seed/estate-g1/1000/800",
-      "https://picsum.photos/seed/estate-g2/1000/800",
-      "https://picsum.photos/seed/estate-g3/1000/800"
+      "https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=80"
     ],
     price: "$15,200,000",
     location: "Aspen, CO",
