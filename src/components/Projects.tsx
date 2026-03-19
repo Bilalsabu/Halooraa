@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { ArrowDownRight, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import ContactModal from './ContactModal';
 
 const projects = [
-  { name: 'Rusty House', tags: ['HALOORA WINDOW', 'HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA X SLIDING DOOR'], img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-  { name: 'Rosewood Pilates Studio', tags: ['HALOORA X SLIDING DOOR', 'HALOORA GLASS SKYLIGHT / RIDGELIGHT'], img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-  { name: 'Beulah Walk', tags: ['HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA SLIDING DOOR', 'HALOORA WINDOW'], img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-  { name: 'Berkeley Road', tags: ['HALOORA X SLIDING DOOR', 'HALOORA SLIDING DOOR'], img: 'https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { name: 'Rusty House', tags: ['HALOORA WINDOW', 'HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA X SLIDING DOOR'], img: 'https://picsum.photos/seed/project1/800/600' },
+  { name: 'Rosewood Pilates Studio', tags: ['HALOORA X SLIDING DOOR', 'HALOORA GLASS SKYLIGHT / RIDGELIGHT'], img: 'https://picsum.photos/seed/project2/800/600' },
+  { name: 'Beulah Walk', tags: ['HALOORA X VERTICAL (STRUCTURAL GLAZING)', 'HALOORA SLIDING DOOR', 'HALOORA WINDOW'], img: 'https://picsum.photos/seed/project3/800/600' },
+  { name: 'Berkeley Road', tags: ['HALOORA X SLIDING DOOR', 'HALOORA SLIDING DOOR'], img: 'https://picsum.photos/seed/project4/800/600' },
 ];
 
 export default function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="projects" className="py-24 md:py-40 px-6 md:px-16 border-t border-white/10 bg-[var(--color-black)]">
@@ -23,7 +25,10 @@ export default function Projects() {
         <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight leading-[1.2] max-w-2xl text-white">
           Each project tells its own story of <span className="italic text-gradient-gold">collaboration</span> and <span className="italic text-gradient-gold">precision</span>.
         </h2>
-        <div className="p-[1px] bg-gradient-gold rounded-full inline-block group cursor-pointer shrink-0">
+        <div 
+          onClick={() => setIsModalOpen(true)}
+          className="p-[1px] bg-gradient-gold rounded-full inline-block group cursor-pointer shrink-0"
+        >
           <button className="bg-[var(--color-black)] text-[var(--color-gold)] px-6 py-4 rounded-full font-mono text-[10px] md:text-xs tracking-widest uppercase flex items-center gap-3 group-hover:bg-transparent group-hover:text-black transition-colors">
             <ArrowDownRight className="w-4 h-4" />
             View projects
@@ -68,6 +73,7 @@ export default function Projects() {
                     src={project.img} 
                     alt={project.name} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -87,6 +93,7 @@ export default function Projects() {
                     src={project.img} 
                     alt={project.name} 
                     className="w-full h-full object-cover" 
+                    referrerPolicy="no-referrer"
                   />
                 </motion.div>
               )}
@@ -94,6 +101,12 @@ export default function Projects() {
           </div>
         ))}
       </div>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        title="View Our Full Portfolio"
+      />
     </section>
   );
 }

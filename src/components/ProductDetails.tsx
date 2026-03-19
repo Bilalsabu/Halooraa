@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 
 const properties = [
   {
@@ -7,11 +9,11 @@ const properties = [
     title: "Villa Aurora",
     description: "A stunning contemporary villa featuring panoramic ocean views, infinity pool, and state-of-the-art smart home integration. Experience the pinnacle of luxury living.",
     fullDescription: "Villa Aurora is a masterpiece of modern architecture, designed to seamlessly blend indoor and outdoor living. The property features 5 spacious bedrooms, 7 bathrooms, a chef's kitchen, and a custom-built wine cellar. The expansive outdoor terrace includes a zero-edge infinity pool that appears to drop off into the ocean, providing breathtaking sunset views every evening.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    image: "https://picsum.photos/seed/villa1/2000/1200",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "https://picsum.photos/seed/villa-g1/1000/800",
+      "https://picsum.photos/seed/villa-g2/1000/800",
+      "https://picsum.photos/seed/villa-g3/1000/800"
     ],
     price: "$12,500,000",
     location: "Beverly Hills, CA",
@@ -26,11 +28,11 @@ const properties = [
     title: "The Pinnacle Penthouse",
     description: "Perched above the city skyline, this exclusive penthouse offers unmatched elegance with floor-to-ceiling windows, private elevator access, and a rooftop terrace.",
     fullDescription: "Occupying the entire top floor of the city's most prestigious residential tower, The Pinnacle Penthouse offers 360-degree views of the skyline. The interior is finished with the finest materials, including imported Italian marble and custom millwork. The private rooftop terrace features a plunge pool, outdoor kitchen, and lounge area perfect for entertaining.",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    image: "https://picsum.photos/seed/penthouse1/2000/1200",
     gallery: [
-      "https://images.unsplash.com/photo-1600573472592-401b489a80bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "https://picsum.photos/seed/penthouse-g1/1000/800",
+      "https://picsum.photos/seed/penthouse-g2/1000/800",
+      "https://picsum.photos/seed/penthouse-g3/1000/800"
     ],
     price: "$8,900,000",
     location: "Manhattan, NY",
@@ -45,11 +47,11 @@ const properties = [
     title: "Serenity Estate",
     description: "Nestled in a private enclave, this sprawling estate combines classic architecture with modern amenities, featuring lush gardens, a tennis court, and a guest house.",
     fullDescription: "Serenity Estate is a private sanctuary set on 5 acres of meticulously landscaped grounds. The main residence boasts classic European architecture with modern updates throughout. Features include a grand double-height foyer, a wood-paneled library, a state-of-the-art home theater, and an indoor spa. The property also includes a separate 2-bedroom guest house and a championship tennis court.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    image: "https://picsum.photos/seed/estate1/2000/1200",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "https://picsum.photos/seed/estate-g1/1000/800",
+      "https://picsum.photos/seed/estate-g2/1000/800",
+      "https://picsum.photos/seed/estate-g3/1000/800"
     ],
     price: "$15,200,000",
     location: "Aspen, CO",
@@ -64,6 +66,7 @@ const properties = [
 export default function ProductDetails() {
   const { id } = useParams();
   const property = properties.find(p => p.id === id);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (!property) {
     return (
@@ -109,7 +112,10 @@ export default function ProductDetails() {
               {property.fullDescription}
             </p>
             
-            <div className="p-[1px] bg-gradient-gold rounded-full inline-block self-start group cursor-pointer">
+            <div 
+              onClick={() => setIsModalOpen(true)}
+              className="p-[1px] bg-gradient-gold rounded-full inline-block self-start group cursor-pointer"
+            >
               <button className="bg-[var(--color-black)] text-[var(--color-gold)] px-8 py-4 rounded-full font-mono text-xs tracking-widest uppercase flex items-center gap-3 group-hover:bg-transparent group-hover:text-black transition-colors">
                 Inquire Now
               </button>
@@ -128,6 +134,12 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        title={`Inquire About ${property.title}`}
+      />
     </div>
   );
 }

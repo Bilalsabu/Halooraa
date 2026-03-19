@@ -1,11 +1,15 @@
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <footer className="bg-[var(--color-black)] text-white py-24 md:py-40 px-6 md:px-16 flex flex-col items-center text-center relative overflow-hidden border-t border-white/10">
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          src="https://picsum.photos/seed/footer/2000/1000" 
           alt="Footer background" 
           className="w-full h-full object-cover grayscale"
         />
@@ -22,7 +26,10 @@ export default function Footer() {
           Ready to discuss your next <span className="italic text-gradient-gold">project</span>?
         </h2>
         
-        <div className="p-[1px] bg-gradient-gold rounded-full inline-block group cursor-pointer mb-32">
+        <div 
+          onClick={() => setIsModalOpen(true)}
+          className="p-[1px] bg-gradient-gold rounded-full inline-block group cursor-pointer mb-32"
+        >
           <button className="bg-[var(--color-black)] text-[var(--color-gold)] px-8 py-5 rounded-full font-mono text-[10px] md:text-xs tracking-widest uppercase flex items-center gap-3 group-hover:bg-transparent group-hover:text-black transition-colors">
             Contact us
             <ArrowUpRight className="w-4 h-4" />
@@ -59,6 +66,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        title="Get in Touch"
+      />
     </footer>
   );
 }

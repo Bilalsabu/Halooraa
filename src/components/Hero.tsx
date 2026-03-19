@@ -1,6 +1,10 @@
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative h-screen flex flex-col items-center justify-center p-6 md:p-12 text-white overflow-hidden bg-black">
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -21,7 +25,10 @@ export default function Hero() {
             <div className="h-[0.5px] flex-grow bg-[var(--color-gold)]/50" />
           </div>
         </div>
-        <button className="hidden md:flex font-display text-[8px] md:text-xs tracking-[0.2em] uppercase font-light items-center gap-1 md:gap-2 text-white bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_4px_24px_rgba(255,255,255,0.1)] px-3 py-1.5 md:px-6 md:py-3 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 active:scale-95">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="hidden md:flex font-display text-[8px] md:text-xs tracking-[0.2em] uppercase font-light items-center gap-1 md:gap-2 text-white bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_4px_24px_rgba(255,255,255,0.1)] px-3 py-1.5 md:px-6 md:py-3 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 active:scale-95"
+        >
           <span>Book Private Viewing</span>
           <ArrowUpRight className="w-2.5 h-2.5 md:w-4 md:h-4" />
         </button>
@@ -32,11 +39,20 @@ export default function Hero() {
           Where <span className="italic text-gradient-gold">Elegance</span> Meets Timeless Living.
         </h2>
         
-        <button className="flex md:hidden font-display text-[9px] tracking-[0.2em] uppercase font-light items-center gap-1.5 text-white bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_4px_24px_rgba(255,255,255,0.1)] px-5 py-2.5 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 active:scale-95">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="flex md:hidden font-display text-[9px] tracking-[0.2em] uppercase font-light items-center gap-1.5 text-white bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_4px_24px_rgba(255,255,255,0.1)] px-5 py-2.5 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 active:scale-95"
+        >
           <span>Book Private Viewing</span>
           <ArrowUpRight className="w-3 h-3" />
         </button>
       </div>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        title="Book a Private Viewing"
+      />
     </section>
   );
 }

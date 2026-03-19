@@ -8,19 +8,19 @@ const properties = [
     id: "villa-aurora",
     title: "Villa Aurora",
     description: "A stunning contemporary villa featuring panoramic ocean views, infinity pool, and state-of-the-art smart home integration. Experience the pinnacle of luxury living.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "https://picsum.photos/seed/villa1/1000/800",
   },
   {
     id: "the-pinnacle",
     title: "The Pinnacle Penthouse",
     description: "Perched above the city skyline, this exclusive penthouse offers unmatched elegance with floor-to-ceiling windows, private elevator access, and a rooftop terrace.",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "https://picsum.photos/seed/penthouse1/1000/800",
   },
   {
     id: "serenity-estate",
     title: "Serenity Estate",
     description: "Nestled in a private enclave, this sprawling estate combines classic architecture with modern amenities, featuring lush gardens, a tennis court, and a guest house.",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "https://picsum.photos/seed/estate1/1000/800",
   }
 ];
 
